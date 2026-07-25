@@ -1,9 +1,11 @@
-self.addEventListener("install", e => {
-    self.skipWaiting();
+const CACHE_NAME = "messpass-v1";
+
+self.addEventListener("install", event => {
+  self.skipWaiting();
 });
 
-self.addEventListener("activate", e => {
-    self.clients.claim();
+self.addEventListener("activate", event => {
+  self.clients.claim();
 });
 
-self.addEventListener("fetch", e => {});
+self.addEventListener("fetch", event => {});
